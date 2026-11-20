@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudoclases de CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pseudoclases de CSS</h1>
+      <p>Ejemplos de cada pseudoclase. El codigo esta en styles.css</p>
+    </header>
+
+    <main>
+      <!-- ENLACES -->
+      <section>
+        <h2>Enlaces</h2>
+
+        <div class="caja">
+          <h3>:link</h3>
+          <a class="enlace-link" href="https://developer.mozilla.org/es/"
+            >Enlace sin visitar</a
+          >
+        </div>
+
+        <div class="caja">
+          <h3>:visited</h3>
+          <a
+            class="enlace-visited"
+            href="https://developer.mozilla.org/es/docs/Web/CSS"
+            >Enlace que ya visite</a
+          >
+        </div>
+
+        <div class="caja">
+          <h3>:any-link</h3>
+          <a class="enlace-any" href="https://www.w3.org/">Enlace con href</a>
+        </div>
+
+        <div class="caja">
+          <h3>:target</h3>
+          <a href="#destino">Ir al destino</a>
+          <p id="destino" class="destino">Este es el elemento destino</p>
+        </div>
+      </section>
+
+      <!-- INTERACCION -->
+      <section>
+        <h2>Interaccion del usuario</h2>
+
+        <div class="caja">
+          <h3>:hover</h3>
+          <button class="btn-hover">Pasa el mouse</button>
+        </div>
+
+        <div class="caja">
+          <h3>:active</h3>
+          <button class="btn-active">Mantener presionado</button>
+        </div>
+
+        <div class="caja">
+          <h3>:focus</h3>
+          <input class="input-focus" type="text" placeholder="Haz clic aqui" />
+        </div>
+
+        <div class="caja">
+          <h3>:focus-visible</h3>
+          <button class="btn-focus-visible">Usa la tecla Tab</button>
+        </div>
+
+        <div class="caja">
+          <h3>:focus-within</h3>
+          <div class="grupo-focus">
+            <input type="text" placeholder="Escribe aqui" />
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMULARIOS -->
+      <section>
+        <h2>Formularios</h2>
+
+        <div class="caja">
+          <h3>:enabled y :disabled</h3>
+          <input class="input-estado" type="text" value="Habilitado" />
+          <input
+            class="input-estado"
+            type="text"
+            value="Deshabilitado"
+            disabled
+          />
+        </div>
+
+        <div class="caja">
+          <h3>:read-only y :read-write</h3>
+          <input
+            class="input-lectura"
+            type="text"
+            value="Solo lectura"
+            readonly
+          />
+          <input class="input-lectura" type="text" value="Se puede editar" />
+        </div>
+
+        <div class="caja">
+          <h3>:placeholder-shown</h3>
+          <input
+            class="input-placeholder"
+            type="text"
+            placeholder="Escribe algo"
+          />
+        </div>
+
+        <div class="caja">
+          <h3>:default</h3>
+          <form>
+            <label
+              ><input class="check-default" type="checkbox" checked /> Marcado
+              por defecto</label
+            >
+            <label
+              ><input class="check-default" type="checkbox" /> Sin marcar</label
+            >
+          </form>
+        </div>
+
+        <div class="caja">
+          <h3>:checked</h3>
+          <label
+            ><input class="check-marcado" type="checkbox" /><span>
+              Marcame</span
+            ></label
+          >
+        </div>
+
+        <div class="caja">
+          <h3>:indeterminate</h3>
+          <p>Barra de progreso sin valor:</p>
+          <progress class="barra"></progress>
+        </div>
+
+        <div class="caja">
+          <h3>:required y :optional</h3>
+          <input
+            class="input-requerido"
+            type="text"
+            placeholder="Obligatorio"
+            required
+          />
+          <input class="input-requerido" type="text" placeholder="Opcional" />
+        </div>
+
+        <div class="caja">
+          <h3>:valid y :invalid</h3>
+          <input
+            class="input-valido"
+            type="email"
+            placeholder="correo@ejemplo.com"
+            required
+          />
+        </div>
+
+        <div class="caja">
+          <h3>:in-range y :out-of-range</h3>
+          <p>Numero entre 1 y 10</p>
+          <input class="input-rango" type="number" min="1" max="10" value="5" />
+        </div>
+      </section>
+
+      <!-- ESTRUCTURA -->
+      <section>
+        <h2>Estructura</h2>
+
+        <div class="caja">
+          <h3>:root</h3>
+          <p>Se usa en styles.css para definir los colores de la pagina.</p>
+        </div>
+
+        <div class="caja">
+          <h3>:empty</h3>
+          <div class="vacio"></div>
+          <div class="vacio">Tengo texto</div>
+        </div>
+
+        <div class="caja">
+          <h3>:first-child</h3>
+          <ul class="lista lista-primero">
+            <li>Uno</li>
+            <li>Dos</li>
+            <li>Tres</li>
+            <li>Cuatro</li>
+          </ul>
+        </div>
+
+        <div class="caja">
+          <h3>:last-child</h3>
+          <ul class="lista lista-ultimo">
+            <li>Uno</li>
+            <li>Dos</li>
+            <li>Tres</li>
+            <li>Cuatro</li>
+          </ul>
+        </div>
+
+        <div class="caja">
+          <h3>:only-child</h3>
+          <div class="contenedor-solo"><p>Soy hijo unico</p></div>
+          <div class="contenedor-solo">
+            <p>Hermano 1</p>
+            <p>Hermano 2</p>
+          </div>
+        </div>
+
+        <div class="caja">
+          <h3>:nth-child(even)</h3>
+          <ul class="lista lista-pares">
+            <li>Uno</li>
+            <li>Dos</li>
+            <li>Tres</li>
+            <li>Cuatro</li>
+            <li>Cinco</li>
+            <li>Seis</li>
+          </ul>
+        </div>
+
+        <div class="caja">
+          <h3>:nth-last-child(2)</h3>
+          <ul class="lista lista-penultimo">
+            <li>Uno</li>
+            <li>Dos</li>
+            <li>Tres</li>
+            <li>Cuatro</li>
+          </ul>
+        </div>
+
+        <div class="caja">
+          <h3>:first-of-type</h3>
+          <div class="tipos tipos-primero">
+            <p>Parrafo 1</p>
+            <span>Span 1</span>
+            <p>Parrafo 2</p>
+            <span>Span 2</span>
+          </div>
+        </div>
+
+        <div class="caja">
+          <h3>:last-of-type</h3>
+          <div class="tipos tipos-ultimo">
+            <p>Parrafo 1</p>
+            <span>Span 1</span>
+            <p>Parrafo 2</p>
+            <span>Span 2</span>
+          </div>
+        </div>
+
+        <div class="caja">
+          <h3>:only-of-type</h3>
+          <div class="tipos tipos-unico">
+            <p>Parrafo 1</p>
+            <span>Soy el unico span</span>
+            <p>Parrafo 2</p>
+          </div>
+        </div>
+
+        <div class="caja">
+          <h3>:nth-of-type(2)</h3>
+          <div class="tipos tipos-segundo">
+            <p>Parrafo 1</p>
+            <span>Span 1</span>
+            <p>Parrafo 2</p>
+            <span>Span 2</span>
+          </div>
+        </div>
+
+        <div class="caja">
+          <h3>:nth-last-of-type(1)</h3>
+          <div class="tipos tipos-ultimo-tipo">
+            <p>Parrafo 1</p>
+            <span>Span 1</span>
+            <p>Parrafo 2</p>
+            <span>Span 2</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FUNCIONALES -->
+      <section>
+        <h2>Funcionales</h2>
+
+        <div class="caja">
+          <h3>:not()</h3>
+          <ul class="lista lista-not">
+            <li>Normal</li>
+            <li class="especial">Especial</li>
+            <li>Normal</li>
+          </ul>
+        </div>
+
+        <div class="caja">
+          <h3>:is()</h3>
+          <div class="titulos">
+            <h4>Titulo h4</h4>
+            <h5>Titulo h5</h5>
+            <h6>Titulo h6</h6>
+          </div>
+        </div>
+
+        <div class="caja">
+          <h3>:where()</h3>
+          <div class="donde">
+            <p>Parrafo con :where()</p>
+            <p class="otro">Parrafo que lo sobrescribe</p>
+          </div>
+        </div>
+
+        <div class="caja">
+          <h3>:has()</h3>
+          <div class="tarjeta">
+            <img alt="" width="20" height="20" /> Tarjeta con imagen
+          </div>
+          <div class="tarjeta">Tarjeta sin imagen</div>
+        </div>
+      </section>
+
+      <!-- IDIOMA -->
+      <section>
+        <h2>Idioma y direccion</h2>
+
+        <div class="caja idiomas">
+          <h3>:lang()</h3>
+          <p lang="es">Texto en espanol</p>
+          <p lang="en">Text in English</p>
+        </div>
+
+        <div class="caja direcciones">
+          <h3>:dir()</h3>
+          <p dir="ltr">Texto de izquierda a derecha</p>
+          <p dir="rtl" lang="ar">Texto de derecha a izquierda</p>
+        </div>
+      </section>
+
+      <!-- OTROS -->
+      <section>
+        <h2>Otros</h2>
+
+        <div class="caja">
+          <h3>:open</h3>
+          <details class="detalle">
+            <summary>Haz clic para abrir</summary>
+            <p>Contenido del detalle</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Trabajo de pseudoclases de CSS</p>
+    </footer>
+  </body>
+</html>
